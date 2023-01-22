@@ -1,5 +1,6 @@
 ---
 import Footer from '../components/Footer.astro';
+import Nav from '../components/Nav.astro';
 import MainHead from './MainHead.astro';
 
 import '../styles/global.css';
@@ -11,6 +12,7 @@ const { title = 'Default Title', description = 'Default Description' } =
 <html lang="en">
   <MainHead {title} {description} />
   <body>
+    <Nav />
     <slot>Default text</slot>
     <Footer />
   </body>
