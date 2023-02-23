@@ -5,12 +5,17 @@ import MainHead from './MainHead.astro';
 
 import '../styles/global.css';
 
-const { title = 'Default Title', description = 'Default Description' } =
-  Astro.props;
+const {
+  title = 'Default Title',
+  description = 'Default Description',
+  image,
+  frontmatter,
+  robots,
+} = Astro.props;
 ---
 
 <html lang="en">
-  <MainHead {title} {description} />
+  <MainHead {title} {description} {image} {frontmatter} {robots} />
   <body>
     <Nav />
     <main>
